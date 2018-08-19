@@ -96,6 +96,18 @@
         <div class="jumbotron-group">
             <div class="mask"></div>
             <div class="jumbotron jumbotron-video"></div>
+            
+            <div class="owl-carousel banner-jumbotron">
+                <div class="banner-container">
+                    <div class="banner-img" style="background-image: url(assets/images/slide/slide-1.jpg)"></div>                     
+                </div>
+                <div class="banner-container">
+                    <div class="banner-img" style="background-image: url(assets/images/slide/slide-2.jpg)"></div>                     
+                </div>
+                <div class="banner-container">
+                    <div class="banner-img" style="background-image: url(assets/images/slide/slide-3.jpg)"></div>                     
+                </div>               
+            </div>
         </div>
 
         <div class="brand-story hero">
@@ -482,14 +494,23 @@
 <script src="assets/vender/rellax/rellax.min.js"></script>
 
 <script>
+    $('.js-dropdown-btn').on('click', function() {
+        $(this).toggleClass('active');
+        $('.js-dropdown-content').toggleClass('active');
+    })
+    
     $(document).ready(function() {
         $(".owl-carousel").owlCarousel({
             loop: true,
             margin: 20,
             nav: true,
+            autoplay:true,
             responsive: {
                 0: {
-                    items: 2.3
+                    items: 1
+                },
+                480: {
+                    items:2.3  
                 },
                 769: {
                     items: 4
@@ -497,11 +518,6 @@
             }
         });
     });
-
-    $('.js-dropdown-btn').on('click', function() {
-        $(this).toggleClass('active');
-        $('.js-dropdown-content').toggleClass('active');
-    })
 
     // vide initialize
     $('.jumbotron-video').vide({
