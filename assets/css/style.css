@@ -929,6 +929,11 @@ header {
 .more-list .owl-carousel .owl-dots .owl-dot.active{
     background-color: #D185DD;
 }
+@media (max-width:770px){
+    .more-list .owl-carousel .owl-nav{
+        top: calc((100% - 60px) / 2 - 20px);
+    }
+}
 
 /*********************************/
 
